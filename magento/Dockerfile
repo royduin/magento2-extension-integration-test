@@ -15,7 +15,7 @@ RUN apt-get update --fix-missing && \
     apt-get update && \
     apt-get install -y elasticsearch mariadb-server mariadb-client && \
     rm -rf /var/lib/apt/lists/* && \
-    echo 'memory_limit = 2048M' >> /usr/local/etc/php/conf.d/memory-limit-php.ini && \
+    echo 'memory_limit = 4G' >> /usr/local/etc/php/conf.d/memory-limit-php.ini && \
     curl -o magento.zip https://repo-magento-mirror.fooman.co.nz/dist/magento/$MAGENTO_TYPE/magento-$MAGENTO_TYPE-$MAGENTO_VERSION.zip && \
     unzip -q magento.zip -d . && \
     rm magento.zip && \
