@@ -16,6 +16,7 @@
     <!-- Test suites definition -->
     <testsuites>
         <testsuite name="Magento Integration Tests">
+            <directory suffix="Test.php">/data/extensions/Test/Integration</directory>
             <directory suffix="Test.php">/data/extensions/**/Test/Integration</directory>
         </testsuite>
     </testsuites>
@@ -23,8 +24,10 @@
     <!-- Code coverage filters -->
     <filter>
         <whitelist>
+            <directory suffix=".php">/data/extensions/</directory>
             <directory suffix=".php">/data/extensions/**/</directory>
             <exclude>
+                <directory>/data/extensions/Test</directory>
                 <directory>/data/extensions/**/Test</directory>
             </exclude>
         </whitelist>
